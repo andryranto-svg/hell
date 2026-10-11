@@ -6,23 +6,23 @@ void	ft_putchar(char c)
 
 void	rush(int x, int y)
 {
-	int colonne;
-	int ligne ;
-	ligne = 1;
-	while (ligne <= y)
+	int row;
+	int lig ;
+	lig = 1;
+	while (lig <= y)
 	{	
-		colonne = 1;
-		while (colonne <= x)
+		row = 1;
+		while (row <= x)
 		{
-			if ((ligne == 1 || ligne == y) && (colonne == 1 || colonne == x))
+			if ((lig == 1 || lig == y) && (row == 1 || row == x))
 			{
 				ft_putchar('o');
 			}		
-			else if (ligne == 1 || ligne == y)
+			else if (lig == 1 || lig == y)
 			{
 				ft_putchar('-');
 			}
-			else if (colonne == 1 || colonne == x)
+			else if (row == 1 || row == x)
 			{
 				ft_putchar('|');
 			}
@@ -30,14 +30,10 @@ void	rush(int x, int y)
 			{
 				ft_putchar(' ');
 			}
-		colonne++;		
+		row++;		
 		}
 	ft_putchar('\n');	
-	ligne++;	
+	lig++;	
 	}
 }
-int	main(void)
-{
-	rush(20, 5);
-	return (0);
-}
+
